@@ -1,0 +1,451 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background:  #0ba972;;/* light background */
+/*background: #1cd13d;*//* light background */
+  color: #333; /* dark gray text */
+}
+
+/* Sections (SPA style) */
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0ba972;
+  color: #222;
+  position: relative;
+}
+
+header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #444;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ---------------- HAMBURGER ---------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* ---------------- MOBILE MENU ---------------- */
+@media (max-width: 768px) {
+
+  /* HIDE NAV MENU BY DEFAULT */
+  header nav {
+    display: none !important;
+    flex-direction: column;
+    background: #0ba972;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    gap: 15px;
+  }
+
+  /* WHEN .show IS ADDED => SHOW MENU */
+  header nav.show {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #E0E0E0; /* secondary gray */
+  color: #111;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 8px;
+  background-color: #444; /* dark gray accent */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background-color: #0ba972; /* darker gray accent */
+}
+
+.btn:hover {
+  background-color: #000; /* black hover */
+}
+
+/* About Section */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #FAFAFA; /* neutral white */
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 900px;
+  border: 1px solid #DDD; /* light gray border */
+}
+
+.about h2 {
+  font-size: 26px;
+  color: #222;
+}
+
+.about p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Form Containers */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #FAFAFA;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #DDD;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #CCC;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  color: #222;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #444; /* dark gray accent */
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #000;
+}
+
+/* Footer */
+footer {
+  background: #E0E0E0;
+  color: #222;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 13px;
+}
+
+/* Items Grid */
+.items-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #DDD;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+  border-color: #AAA;
+}
+
+.item-card img {
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto 12px;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Status Badges */
+.status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lost {
+  background: #EEE;
+  color: #333;
+  border: 1px solid #AAA;
+}
+
+.found {
+  background: #DDD;
+  color: #000;
+  border: 1px solid #888;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  background: #E0E0E0;
+  text-align: center;
+  color: #111;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #DDD;
+}
+
+.contact-container h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+}
+
+.contact-form button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contact-form button:hover {
+  background: #000;
+}
+
+/* File Upload */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #444;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+}
+
+.file-upload-label:hover {
+  background: #000;
+}
+
+/* Item Details */
+.item-details {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #DDD;
+}
+
+.item-details img {
+  width: 80%;
+  max-width: 180px;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 6px;
+}
+
+.reclaim-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #444;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.reclaim-btn:hover {
+  background: #000;
+}
+
+/* Report Choice Section */
+.report-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.report-option {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #DDD;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 200px;
+  text-align: center;
+}
+
+.report-option:hover {
+  transform: translateY(-3px);
+  border-color: #AAA;
+}
+
+.report-option img {
+  display: block;
+  margin: 0 auto 12px;
+  width: 100px;
+}
+
+.report-option h2 {
+  font-size: 16px;
+  color: #333;
+}
+
+.preview-img{
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+/* Circular Back Button */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  font-size: 18px; 
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn:hover {
+  background-color: #000;
+}
+
+/* Modal Styles */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; }
+.modal-content { background:#fff; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
