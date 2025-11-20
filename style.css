@@ -3,9 +3,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background:  #0ba972;;/* light background */
+  background: linear-gradient(to right, #595cff, #60efff);/* light background */
 /*background: #1cd13d;*//* light background */
-  color: #333; /* dark gray text */
+  color: #333; 
 }
 
 /* Sections (SPA style) */
@@ -14,15 +14,25 @@ section {
 }
 section.active {
   display: block;
+  margin-bottom: \100px;
 }
-
+/* .lost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background :transparent;
+  padding: 50px;
+} */
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #0ba972;
+  /* background-color: #0ba972; */
+  background: linear-gradient(to right, #0061ff, #60efff);
+
   color: #222;
   position: relative;
 }
@@ -31,7 +41,8 @@ header .logo {
   font-size: 32px;
   font-weight: bold;
   text-decoration: none;
-  color: #444;
+  color: #f3f3f3;
+  cursor: pointer;
 }
 
 header nav {
@@ -45,6 +56,9 @@ header nav a {
   font-weight: 600;
 }
 
+#nav-menu a:hover{
+  color: #FAFAFA;
+}
 /* ---------------- HAMBURGER ---------------- */
 .hamburger {
   display: none;
@@ -67,7 +81,7 @@ header nav a {
   header nav {
     display: none !important;
     flex-direction: column;
-    background: #0ba972;
+     background: linear-gradient(to right, #0061ff, #60efff);
     width: 100%;
     position: absolute;
     top: 60px;
@@ -96,6 +110,11 @@ header nav a {
   color: #111;
 }
 
+.hero img{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
 .hero h2 {
   font-size: 32px;
   margin-bottom: 15px;
@@ -105,13 +124,15 @@ header nav a {
 .hero p {
   font-size: 17px;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
   margin: 8px;
-  background-color: #444; /* dark gray accent */
+ background: linear-gradient(to right, #9bf8f4, #6f7bf7);
+   /* dark gray accent */
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -121,32 +142,35 @@ header nav a {
   transition: 0.2s;
 }
 
-.primary-btn {
-  background-color: #0ba972; /* darker gray accent */
-}
+/* .primary-btn {
+   background: linear-gradient(to right, #b597f6, #96c6ea);/* darker gray accent 
+} */
 
-.btn:hover {
-  background-color: #000; /* black hover */
+.hero a:hover {
+  background: linear-gradient(to right, #6f7bf7, #9bf8f4);
 }
 
 /* About Section */
 .about {
   padding: 40px 20px;
+  width: 90%;
   text-align: center;
-  background-color: #FAFAFA; /* neutral white */
+  font-weight: 500;
+  background-color:linear-gradient(to right, #9bf8f4, #6f7bf7);/* neutral white */
   margin: 30px auto;
   border-radius: 10px;
   max-width: 900px;
-  border: 1px solid #DDD; /* light gray border */
+   /* light gray border */
 }
 
 .about h2 {
   font-size: 26px;
-  color: #222;
+  color: black;
+  font: weight 900%;
 }
 
 .about p {
-  color: #555;
+  color: black;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -214,7 +238,7 @@ button:hover {
 
 /* Footer */
 footer {
-  background: #E0E0E0;
+  background:linear-gradient(to right, #595cff, #60efff);
   color: #222;
   text-align: center;
   padding: 15px;
@@ -286,7 +310,7 @@ footer {
 .contact-container {
   max-width: 500px;
   margin: 0 auto;
-  background: #fff;
+  background: linear-gradient(to right, #6f7bf7, #9bf8f4);
   padding: 25px;
   border-radius: 8px;
   border: 1px solid #DDD;
