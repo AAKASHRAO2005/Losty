@@ -3,19 +3,24 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #595cff, #60efff);/* light background */
-/*background: #1cd13d;*//* light background */
-  color: #333; 
+  background: linear-gradient(90deg, #EBF4F5, #B5C6E0);
+  ;
+  /* light background */
+  /*background: #1cd13d;*/
+  /* light background */
+  color: #333;
 }
 
 /* Sections (SPA style) */
 section {
   display: none;
 }
+
 section.active {
   display: block;
   margin-bottom: \100px;
 }
+
 /* .lost {
   display: flex;
   justify-content: center;
@@ -31,7 +36,7 @@ header {
   align-items: center;
   padding: 15px 40px;
   /* background-color: #0ba972; */
-  background: linear-gradient(to right, #0061ff, #60efff);
+  background: linear-gradient(to right, #595cff, #60efff);
 
   color: #222;
   position: relative;
@@ -56,9 +61,10 @@ header nav a {
   font-weight: 600;
 }
 
-#nav-menu a:hover{
+#nav-menu a:hover {
   color: #FAFAFA;
 }
+
 /* ---------------- HAMBURGER ---------------- */
 .hamburger {
   display: none;
@@ -81,7 +87,7 @@ header nav a {
   header nav {
     display: none !important;
     flex-direction: column;
-     background: linear-gradient(to right, #0061ff, #60efff);
+    background: linear-gradient(to right, #0061ff, #60efff);
     width: 100%;
     position: absolute;
     top: 60px;
@@ -103,14 +109,16 @@ header nav a {
 
 
 /* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: #E0E0E0; /* secondary gray */
-  color: #111;
+.hero 
+  {
+    background-color: linear-gradient(to right, #595cff, #60efff);
+    text-align: center;
+    padding: 60px 20px;
+    color: #111;
 }
 
-.hero img{
+
+.hero img {
   width: 300px;
   margin-bottom: 20px;
 }
@@ -131,9 +139,10 @@ header nav a {
   display: inline-block;
   padding: 10px 20px;
   margin: 8px;
- background: linear-gradient(to right, #9bf8f4, #6f7bf7);
-   /* dark gray accent */
+  background: #9bafd9;  
+  /* dark gray accent */
   color: #fff;
+  
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -147,7 +156,7 @@ header nav a {
 } */
 
 .hero a:hover {
-  background: linear-gradient(to right, #6f7bf7, #9bf8f4);
+  background: #9bafd9
 }
 
 /* About Section */
@@ -156,11 +165,12 @@ header nav a {
   width: 90%;
   text-align: center;
   font-weight: 500;
-  background-color:linear-gradient(to right, #9bf8f4, #6f7bf7);/* neutral white */
+  background: linear-gradient(90deg, #EBF4F5, #B5C6E0);
+  /* neutral white */
   margin: 30px auto;
   border-radius: 10px;
   max-width: 900px;
-   /* light gray border */
+  /* light gray border */
 }
 
 .about h2 {
@@ -224,7 +234,8 @@ button {
   padding: 12px;
   border: none;
   border-radius: 6px;
-  background: #444; /* dark gray accent */
+  background: #444;
+  /* dark gray accent */
   color: #fff;
   font-size: 15px;
   font-weight: bold;
@@ -238,18 +249,18 @@ button:hover {
 
 /* Footer */
 footer {
-  background:linear-gradient(to right, #595cff, #60efff);
-  color: #222;
-  text-align: center;
-  padding: 15px;
-  margin-top: auto;
-  font-size: 13px;
+    background: linear-gradient(to right, #595cff, #60efff);
+    color: #222;
+    text-align: center;
+    padding: 15px;
+    margin-top: 405px;
+    font-size: 13px;
 }
 
 /* Items Grid */
 .items-container {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
@@ -301,10 +312,18 @@ footer {
 
 /* Contact Section */
 .contact-section {
-  padding: 50px 20px;
-  background: #E0E0E0;
-  text-align: center;
-  color: #111;
+    background: linear-gradient(to right, #595cff, #60efff);
+    color: #222;
+    text-align: center;
+    padding: 15px;
+    margin-top: 405px;
+    font-size: 13px;
+}
+    color: #222;
+    text-align: center;
+    padding: 15px;
+    margin-top: 405px;
+    font-size: 13px;
 }
 
 .contact-container {
@@ -409,9 +428,11 @@ footer {
 .report-options {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 10px;
   margin-top: 25px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
+
 }
 
 .report-option {
@@ -441,12 +462,14 @@ footer {
   color: #333;
 }
 
-.imagePreBg{
+
+
+.imagePreBg {
 
   display: flex;
   justify-content: center;
   background: #3d393900;
-    margin-top: 10px;
+  margin-top: 10px;
 
   border: dashed 2px #999;
   padding: 10px 0px;
@@ -455,11 +478,46 @@ footer {
 
 
 }
-.preview-img{
+
+
+.search-filter {
+  display: flex;
+  padding: 30px 2px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 40px;
+  
+}
+
+#filterSelect {
+  padding: 2px 4px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  font-size: 14px;
+  background: linear-gradient(to right, #103783, #9bafd9);
+  color: #d4d4d4;
+
+}
+
+#sortSelect {
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  font-size: 14px;
+
+  background: linear-gradient(to right, #103783, #9bafd9);
+  color: #d4d4d4;
+}
+
+.preview-img {
   width: auto;
   border-radius: 6px;
   height: 200px;
 }
+
 /* Circular Back Button */
 .back-btn {
   position: absolute;
@@ -471,7 +529,7 @@ footer {
   border: none;
   background-color: #444;
   color: #fff;
-  font-size: 18px; 
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -484,6 +542,31 @@ footer {
 }
 
 /* Modal Styles */
-.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; }
-.modal-content { background:#fff; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; }
-.close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
