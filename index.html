@@ -83,7 +83,10 @@
           <input type="file" id="lostUpload" accept="image/*"
                  onchange="previewImage(event,'lostPreview')">
           <label for="lostUpload" class="file-upload-label">📷 Upload Image</label>
+          <div class="imagePreBg">
+
           <img id="lostPreview" class="preview-img" style="display:none;">
+          </div>
         </div>
 
         <button type="submit">Submit</button>
@@ -106,7 +109,10 @@
           <input type="file" id="foundUpload" accept="image/*"
                  onchange="previewImage(event,'foundPreview')">
           <label for="foundUpload" class="file-upload-label">📷 Upload Image</label>
+          <div class="imagePreBg">
+
           <img id="foundPreview" class="preview-img" style="display:none;">
+        </div>
         </div>
 
         <button type="submit">Submit</button>
@@ -158,8 +164,11 @@
           <input type="file" id="editUpload" accept="image/*"
                  onchange="previewImage(event,'editPreview')">
           <label for="editUpload" class="file-upload-label">📷 Change Image</label>
+          <div class="imagePreBg">
           <img id="editPreview" class="preview-img" style="display:none;">
+          </div>
         </div>
+          <!-- <img id="editPreview" class="preview-img" style="display:none;"> -->
 
         <button type="submit">Save Changes</button>
       </form>

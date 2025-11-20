@@ -49,7 +49,7 @@ function submitItem(e, status) {
   const id = Date.now();
   const inputs = e.target.querySelectorAll("input[type='text']");
   const name = inputs[0].value;
-  const loc = inputs[1].value;
+  const loc = inputs[5].value;
   const contact = inputs[2].value;
   const desc = e.target.querySelector("textarea").value;
   const fileInput = e.target.querySelector("input[type='file']");

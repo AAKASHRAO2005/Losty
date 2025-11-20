@@ -204,7 +204,7 @@ label {
 input[type="text"],
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: auto 8px;
   margin-top: 6px;
   border: 1px solid #CCC;
   border-radius: 6px;
@@ -441,10 +441,24 @@ footer {
   color: #333;
 }
 
+.imagePreBg{
+
+  display: flex;
+  justify-content: center;
+  background: #3d393900;
+    margin-top: 10px;
+
+  border: dashed 2px #999;
+  padding: 10px 0px;
+
+  border-radius: 4px;
+
+
+}
 .preview-img{
-  max-width: 300px;
-  margin-top: 10px;
+  width: auto;
   border-radius: 6px;
+  height: 200px;
 }
 /* Circular Back Button */
 .back-btn {
